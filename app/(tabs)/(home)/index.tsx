@@ -1,26 +1,14 @@
-import { Text, StyleSheet } from 'react-native';
+import { Text, ImageBackground, View } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <Text>This is the Home Screen</Text>
+    <ImageBackground
+      source={require('../../../assets/images/Pixel-Game.png')} // ← use relative path
+      resizeMode="stretch" // or 'contain', 'stretch', etc.
+    >
+      <View>
+        <Text>Hello from Home Page!</Text>
+      </View>
+    </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
